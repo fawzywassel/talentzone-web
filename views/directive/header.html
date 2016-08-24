@@ -1,0 +1,44 @@
+<header>
+    <nav id="main" class="red darken-3" role="navigation">
+        <div class="nav-wrapper container ">
+            <a id="logo-container" href="#/" class="brand-logo">TalentZone</a>
+            <ul class="right hide-on-med-and-down">
+                <li>{{UserData.talent.firstName}} {{UserData.talent.lastName}} </li>
+                <!-- Dropdown Trigger -->
+                <li><a class=" modal-trigger" href="#account_modal"><i class="material-icons">account_circle</i></a>
+                </li>
+                <li><a class=" dropdown-button" href="#" data-activates="dropdown-menu"><i class="material-icons">more_vert</i></a>
+                </li>
+            </ul>
+
+            <!-- Modal Structure -->
+            <div id="account_modal" class="modal bottom-sheet red darken-3">
+                <div class="modal-content">
+                    <div class="row center-align">
+                        <div class="col m4"><a class="text-darken-4" ng-href="#/" ng-click="logout()"><i class="material-icons" >exit_to_app</i> Log Out</a></div>
+                        <div class="col m4"><a class="text-darken-4" ng-href="#/profile"><i class="material-icons">edit</i>My Profile</a></div>
+                        <div class="col m4"><a href="#/notification"><i class="material-icons">message</i> Requests</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown-menu" class="dropdown-content">
+                <li><a href="#/main/{{UserData.categoryId}}">Home</a></li>
+                <li class="divider"></li>
+                <li><a href="#/category">Categories</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav red darken-3">
+                <li ><a href="#/main/{{UserData.categoryId}}">Home</a></li>
+                <li><a href="#/category ">Categories</a></li>
+                <li><a href="#/profile">My profile</a></li>
+                <li><a href="#/notification">Requests</a></li>
+                <li><a  ng-click="logout()">Logout</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</header>
+
+<script src="js/script.js"></script>

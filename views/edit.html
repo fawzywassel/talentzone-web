@@ -1,0 +1,115 @@
+
+<headerdirective></headerdirective>
+<div class="row">
+    <div class="col l8 m8 offset-m2 offset-l2 s12">
+        <figure class="card-profile-image center">
+
+            <img ng-src="{{imageSrc}}" ng-model="profileImg"  alt="profile image" class="profile circle z-depth-2 responsive-img activator" data-pin-nopin="true">
+            <form>
+                <input type="file" ng-file-select="onFileSelect($files)" id="inputFileToLoad" >
+            </form>
+
+        </figure>
+        <div class="card light-blue">
+            <div class="card-content white-text"><span class="card-title">talentUrl</span>
+                <input  id="talentUrl" type="text" ng-model="newdata.talentUrl" ng-value="UserData.talent.talentUrl" class="validate">
+            </div>
+        </div>
+        <ul id="profile-page-about-details" class="collection z-depth-1">
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-action-wallet-travel"></i>First Name</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+                        <input  id="first_name" ng-model="newdata.firstName"  type="text" ng-value="UserData.talent.firstName" class="validate">
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-action-wallet-travel"></i>Last Name</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+                        <input  id="last_name" ng-model="newdata.lastName"  type="text" ng-value="UserData.talent.lastName" class="validate">
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-poll"></i>Email</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+                        <input  id="email" ng-model="newdata.email" type="email" ng-value="UserData.talent.email" class="validate">
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-domain"></i>Mobile</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+                        <input  id="mobile" ng-model="newdata.mobile" type="text" ng-value="UserData.talent.mobile" class="validate">
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>Age</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+
+                        <input  id="age" ng-model="newdata.age" type="text" ng-value="UserData.talent.age" class="validate">
+
+                    </div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>Gender</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+                        <input class="with-gap" name="gender" ng-model="newdata.gender" type="radio" id="male" value="male" />
+                        <label for="male">Male</label>
+                        <input class="with-gap" name="gender" ng-model="newdata.gender" type="radio" id="female" value="female" />
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </li>
+            <!--<li class="collection-item">-->
+                <!--<div class="row">-->
+                    <!--<div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>Category</div>-->
+                    <!--<div class="col s7 grey-text text-darken-4 right-align">-->
+                        <!--<select ng-model="newUserData.category"  ng-value="UserData.categoryName"  ng-options="cat.id as cat.name for cat in categoryList" ng-if="categoryList">-->
+                            <!--<option value="" disabled selected>choose</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>City</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">
+
+                        <input  id="city" ng-model="newdata.city" type="text" ng-value="UserData.talent.city" class="validate">
+
+                    </div>
+                </div>
+            </li>
+            <!--<li class="collection-item">-->
+                <!--<div class="row">-->
+                    <!--<div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>talentUrl</div>-->
+                    <!--<div class="col s7 grey-text text-darken-4 right-align">-->
+
+                        <!--&lt;!&ndash;<div class="btn btn-flat red" ng-click="addurlinput()">Add URl </div>&ndash;&gt;-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="row center-align">
+    <a ng-click="save()" class="waves-effect btn red darken-4 white-text "> Save</a>
+</div>
+
+
+<script src="../js/script.js"></script>

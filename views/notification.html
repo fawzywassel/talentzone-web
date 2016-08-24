@@ -1,0 +1,20 @@
+
+<headerdirective></headerdirective>
+
+<div class="container">
+    <ul class="collapsible popout" data-collapsible="accordion" ng-repeat = " Req in REQarray">
+        <li class="">
+            <div class="collapsible-header"><i class="material-icons">dashboard</i>{{Req.agency.companyName}}</div>
+            <div class="collapsible-body" style=""><p>{{Req.message}}</p>
+                <p class="center-align" ng-if="Req.state =='Pinding'">
+                <a class="btn green" ng-click="accept(Req.agency.id)"> Accept</a>
+                <a class="btn red " ng-click="refuse(Req.agency.id)"> Refuse</a>
+                </p>
+                <p class="center-align" ng-if="Req.state =='Accepted'">
+                    You accept this request
+                </p>
+            </div>
+        </li>
+
+    </ul>
+</div>

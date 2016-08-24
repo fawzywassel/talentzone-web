@@ -1,0 +1,21 @@
+<headerdirective></headerdirective>
+
+
+<div class="row">
+    <div class="col l8 m8 offset-m2 offset-l2 s12">
+        <ul class="collection ">
+            <li class="collection-item avatar"  ng-repeat="cat in categoryList">
+                <i class="material-icons circle red">class</i>
+                <span class="title">{{cat.name}}</span>
+                <p>
+                    description
+                </p>
+                <a href="#/main/{{cat.id}}" class="secondary-content "><i class="material-icons ">info</i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script src="js/script.js"></script>

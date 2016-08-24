@@ -1,0 +1,132 @@
+<div class="home ">
+    <div class="container-fluid  ">
+        <div class="row center-align">
+            <div class="col s12"><img src="img/final logo.png" alt="" class="logo"/></div>
+
+        </div>
+        <div class="row center-align">
+            <div class="col s12">
+                <a class='btn red waves-effect waves-light' href='#login' modal>Login</a>
+                <a class='btn red waves-effect waves-light' href='#register' modal>Register</a>
+            </div>
+        </div>
+
+        <!--<div class="row">-->
+            <!--{{message}}-->
+            <!---->
+        <!--</div>-->
+
+
+
+
+        <div class="row">
+            <div class="col s12">
+
+                <!-- Modal Structure -->
+                <div id="login" class="modal">
+                    <div class="modal-content">
+
+                        <form class="col s12" name="loginForm">
+                            <div class="form-container">
+                                <h3 class="teal-text center-align">Login</h3>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="mobile" type="text" ng-model="loginDate.mobile" class="validate">
+                                        <label for="mobile">Mobile</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="password" type="password" ng-model="loginDate.pass" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+                                </div>
+                                <p>
+                                    <!-- <input type="checkbox" id="remember"/>
+                                    <label for="remember" id="checkbox" >Remember me</label> -->
+
+                                    {{message}}
+                                </p>
+
+                                <center>
+                                    <button class="modal-action btn red waves-effect waves-light"
+
+                                            ng-click="login()"
+                                            name="action">Login
+                                    </button>
+                                    <br>
+                                    <br>
+                                    <!-- <a href="">Forgotten password?</a> -->
+                                </center>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Modal Structure -->
+                <div id="register" class="modal" name="registerForm">
+                    <form class="col s12">
+                        <div class="form-container">
+                            <h3 class="teal-text center-align">Register</h3>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" ng-model="newUserData.firstName" class="validate">
+                                    <label for="last_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" ng-model="newUserData.lastName" class="validate">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" ng-model="newUserData.email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="mobile" type="text" ng-model="newUserData.mobile" class="validate">
+                                    <label for="mobile">Mobile</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="password" type="password" ng-model="newUserData.pass" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="input-field col s12">
+
+                                      <select ng-model="newUserData.category"  ng-options="cat.id as cat.name for cat in categoryList" ng-if="categoryList">
+                                    <option value="" disabled selected>choose</option>
+                                </select>
+                                    <label for="category">Category</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <p>
+                                {{message}}
+                              </p>
+                            <center>
+                                <button class="btn red waves-effect waves-light"  ng-click="register()" >Submit
+                                </button>
+                            </center>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="js/script.js"></script>

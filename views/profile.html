@@ -1,0 +1,57 @@
+<headerdirective></headerdirective>
+<div class="row">
+    <div class="col l8 m8 offset-m2 offset-l2 s12">
+        <figure class="card-profile-image center">
+            <img src="img/user.png" alt="profile image" class="profile circle z-depth-2 responsive-img activator" data-pin-nopin="true">
+        </figure>
+        <div class="card light-blue">
+            <div class="card-content white-text"><span class="card-title">Talent URl!</span>
+                <p>{{UserData.talent.talentUrl}} </p></div>
+        </div>
+        <ul id="profile-page-about-details" class="collection z-depth-1">
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-action-wallet-travel"></i>Full Name</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">{{UserData.talent.firstName}} {{UserData.talent.lastName}}</div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-poll"></i>Email</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">{{UserData.talent.email}}</div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-domain"></i>Mobile</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">{{UserData.talent.mobile}}</div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>Age</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">{{UserData.talent.age}}</div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>Gender</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">{{UserData.talent.gender}}</div>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i>Category</div>
+                    <div class="col s7 grey-text text-darken-4 right-align">{{UserData.categoryName}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row center-align">
+    <a href="#/edit" class="waves-effect btn red darken-4 white-text "> Edit Profile</a>
+</div>
+
+
+<script src="js/script.js"></script>
